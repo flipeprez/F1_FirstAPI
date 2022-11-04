@@ -9,6 +9,9 @@ app.get('/', (req, res) => {
     res.send("F1 API DATA")
 });
 
+//connection to mongodb
+mongoose.connect();
+
 app.listen(PORT, () => {
     console.log(`server is running in http://localhost:${PORT}`);
 });
