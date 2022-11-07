@@ -1,0 +1,12 @@
+###
+POST http://localhost:3000/api/teams HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Scuderia Ferrari",
+    "foundation": 1929,
+    "victories": 242,
+    "championshipswins": 16,
+    "lastdriver1":"Charles Leclerc",
+    "lastdriver2": "Carlos Sainz"
+}

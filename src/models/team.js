@@ -13,7 +13,11 @@ const teamschema = mongoose.Schema({
     championshipswins: {
         type:Number
     },
-    lastdriver: {
+    lastdriver1: {
+        type:String,
+        require:true
+    },
+    lastdriver2: {
         type:String,
         require:true
     },
