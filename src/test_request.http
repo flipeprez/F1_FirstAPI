@@ -10,3 +10,9 @@ Content-Type: application/json
     "lastdriver1":"Charles Leclerc",
     "lastdriver2": "Carlos Sainz"
 }
+
+###
+GET http://localhost:3000/api/teams HTTP/1.1
+
+###
+GET http://localhost:3000/api/teams/6369611ec70db2904fddda22 HTTP/1.1
