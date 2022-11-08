@@ -31,4 +31,24 @@ router.get('/teams/:id', (req, res)=>{
         .catch((err) => res.json({err}));
 });
 
+//update teamdata with .put()
+router.put('/teams/:id', (req, res)=>{
+    //here we are going to update f1 teams with .updateOne()
+    const {id} = req.params;
+    const { name, foundation, victories, championshipwins, lastdriver1, lastdriver2 } = req.body;
+    teamschema 
+        .updateOne({_id : id }, { $set: {name, foundation, victories, championshipwins, lastdriver1, lastdriver2} })
+        .then((data) => res.json(data))
+        .catch((err) => res.json({err}));
+});
+
+//update teamdata with .delete()
+router.delete('/teams/:id', (req, res)=>{
+    //here we are going to find de f1 teams with .findById()
+    const {id} = req.params;
+    teamschema 
+        .deleteOne({_id: id })
+        .then((data) => res.json(data))
+        .catch((err) => res.json({err}));
+});
 module.exports = router;
