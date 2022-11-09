@@ -1,14 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = requiere('cors');
 const teams = require('./routes/teams')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-//midlewards
+//midleware
 app.use(express.json());
 app.use('/api', teams);
+app.use(cors({origin:['http://localhost:3000']}));
 
 //add routes
 app.get('/', (req, res) => {
